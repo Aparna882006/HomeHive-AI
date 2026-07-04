@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background: #fff8f0;
+  overflow-x: hidden;
+  color: #263238;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2e8b3c;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #256f31;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #263238;
+}
+
+.btn-secondary:hover {
+  background: #f8faf8;
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 600;
+}
+
+.badge-green {
+  background: #e8f5e9;
+  color: #2e8b3c;
+}
+
+/* =========================
+   GLASS EFFECT
+========================= */
+
+.glass {
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(14px);
+}
+
+/* =========================
+   TEXT GRADIENT
+========================= */
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    #2e8b3c,
+    #55c667,
+    #d6b100
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   FLOATING ANIMATIONS
+========================= */
+
+.float-a {
+  animation: floatA 5s ease-in-out infinite;
+}
+
+.float-b {
+  animation: floatB 6s ease-in-out infinite;
+}
+
+.float-c {
+  animation: floatC 7s ease-in-out infinite;
+}
+
+@keyframes floatA {
+  0%,100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes floatB {
+  0%,100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+@keyframes floatC {
+  0%,100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
