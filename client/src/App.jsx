@@ -12,20 +12,22 @@ import PropertyDetails from "./pages/PropertyDetails/PropertyDetails";
 import Login from "./pages/Auth/Login";
 import Signup from "./pages/Auth/Signup";
 
-// Tenant Dashboard
+// Tenant
 import Dashboard from "./pages/Dashboard/Dashboard";
 
-// Owner Pages
+// Owner
 import OwnerDashboard from "./pages/Owner/OwnerDashboard";
 import AddProperty from "./pages/Owner/AddProperty";
 import MyListings from "./pages/Owner/MyListings";
 import EditListing from "./pages/Owner/EditListing";
 import InterestedTenants from "./pages/Owner/InterestedTenants";
 
-
-
 // Chat
 import Chat from "./pages/Chat/Chat";
+
+// NEW COMPONENTS
+import Profile from "./components/profile/Profile";
+import Notifications from "./components/notifications/Notifications";
 
 // Protected Route
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -44,21 +46,16 @@ function PlaceholderPage({ title }) {
 }
 
 const AIMatch = () => <PlaceholderPage title="AI Match" />;
-const Profile = () => <PlaceholderPage title="Profile" />;
-const Notifications = () => (
-  <PlaceholderPage title="Notifications" />
-);
 const NotFound = () => (
   <PlaceholderPage title="404 - Page Not Found" />
 );
-
 export default function App() {
   return (
     <>
       <Routes>
         <Route element={<MainLayout />}>
 
-          {/* PUBLIC */}
+          {/* PUBLIC ROUTES */}
           <Route path="/" element={<Home />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/property/:id" element={<PropertyDetails />} />
@@ -68,7 +65,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
 
-          {/* TENANT */}
+          {/* TENANT DASHBOARD */}
           <Route
             path="/dashboard"
             element={
@@ -78,7 +75,7 @@ export default function App() {
             }
           />
 
-          {/* OWNER */}
+          {/* OWNER DASHBOARD */}
           <Route
             path="/owner"
             element={

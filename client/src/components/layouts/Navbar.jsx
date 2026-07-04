@@ -5,7 +5,6 @@ import {
   Menu,
   X,
   Bell,
-  MessageCircle,
   Sparkles,
   Search,
   LayoutDashboard,
@@ -35,14 +34,14 @@ function useScrollY() {
 
 const NAV_LINKS = [
   {
+    label: "Home",
+    href: "/",
+    icon: null,
+  },
+  {
     label: "Browse Rooms",
     href: "/explore",
     icon: Search,
-  },
-  {
-    label: "AI Match",
-    href: "/ai-match",
-    icon: Sparkles,
   },
 ];
 
@@ -157,14 +156,7 @@ export default function Navbar() {
                   <Bell size={20} />
                 </Link>
 
-                {/* Chat */}
-
-                <Link
-                  to="/chat"
-                  className="relative p-2 rounded-lg hover:bg-gray-100 transition"
-                >
-                  <MessageCircle size={20} />
-                </Link>
+                
 
                 {/* User Menu */}
 
@@ -237,12 +229,7 @@ export default function Navbar() {
                           onClick={() => setUserMenu(false)}
                         />
 
-                        <DropdownItem
-                          href="/chat"
-                          Icon={MessageCircle}
-                          label="Messages"
-                          onClick={() => setUserMenu(false)}
-                        />
+                        
 
                         <DropdownItem
                           href="/notifications"
@@ -369,12 +356,7 @@ export default function Navbar() {
                       onClick={() => setDrawer(false)}
                     />
 
-                    <DropdownItem
-                      href="/chat"
-                      Icon={MessageCircle}
-                      label="Messages"
-                      onClick={() => setDrawer(false)}
-                    />
+                    
 
                     <DropdownItem
                       href="/notifications"
