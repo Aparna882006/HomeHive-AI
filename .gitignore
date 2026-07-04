@@ -1,4 +1,20 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment files
 .env
-node_modules
-dist
-build
+.env.*
+
+# Build folders
+build/
+dist/
+.next/
+out/
+
+# Editor folders
+.vscode/
+.idea/
+
+# Logs
+*.log
